@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LegalEase-AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LegalEase-AI ⚖️</h1>
+        <p>Paste your complex legal document here</p>
+        <form method="POST">
+            <textarea name="legal_text" rows="10" placeholder="Paste legal text here..."></textarea>
+            <button type="submit">Simplify Now</button>
+        </form>
+        {% if result %}
+        <div class="result">
+            <h3>Result:</h3>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
