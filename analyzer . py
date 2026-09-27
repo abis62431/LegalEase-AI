@@ -1,0 +1,12 @@
+def analyze_legal_text(text):
+    """Analyzes legal text and returns simplified version"""
+    risky_words = ["penalty", "termination", "liability", "breach"]
+    risks = [word for word in risky_words if word.lower() in text.lower()]
+    
+    summary = text.replace("hereinafter", "from now on").replace("notwithstanding", "even if")
+    
+    return {
+        "simplified_text": summary[:500],
+        "risky_clauses": risks,
+        "word_count": len(text.split())
+    }
